@@ -1,4 +1,6 @@
-class Corvesor{
+package conversor;
+
+public class Conversor {
 
 	int celsiusParaFahrenheit(){
 		int resultado=(9*40)/(5+32);	
@@ -6,12 +8,12 @@ class Corvesor{
 	}	
 	
 	int celsiusParaFahrenheit(int celsius){
-		int resultado=(9*celcius)/(5+32);	
+		int resultado=(9*celsius)/(5+32);	
 		return resultado;
 	}
 	
 	double celsiusParaFahrenheit(double celsius){
-		double resultado=(9.0*celcius)/(5.0+32.0);	
+		double resultado=(9.0*celsius)/(5.0+32.0);	
 		return resultado;
 	}
 	
@@ -35,5 +37,5 @@ class Corvesor{
 		double celsius=fahrenheitParaCelsius(fahrenheit);	
 		return celsiusParaKelvin(celsius) ;
 	}
-	
+
 }

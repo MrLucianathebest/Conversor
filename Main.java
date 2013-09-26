@@ -14,40 +14,40 @@ public class Main {
 		Conversor conversor = new Conversor();
 		int opcao;
 		double valorParaConversao, resultado=0;
+		String operacao = "Escolha a conversão desejada:\n"
+		+"1 - Celsius para fahrenheit."
+		+"2 - Celsius para kelvin.\n"
+		+"3 - fahrenheit para celsius.\n"
+		+"4 - fahrenheit para kelvin.\n"
+		+"5 - Kelvin para fahrenheit.\n"
+		+"6 - Kelvin para celsius. \n";
 		
-		System.out.println("Escolha a conversão desejada:");
-		System.out.println("1 - Celsius para fahrenheit.");
-		System.out.println("2 - Celsius para kelvin.");
-		System.out.println("3 - fahrenheit para celsius.");
-		System.out.println("4 - fahrenheit para kelvin.");
-		System.out.println("5 - Kelvin para fahrenheit.");
-		System.out.println("6 - Kelvin para celsius.");
+		System.out.println(operacao);
 		
 		opcao = Integer.parseInt(leitor.readLine());
 		
-		System.out.println("Diite o valor que deseja cosnverter:");
+		System.out.println("Diite o valor que deseja converter:");
 		valorParaConversao = Double.parseDouble(leitor.readLine());
-		
-		
-		if(opcao == 1){
+		switch(opcao){
+		case 1:
 			resultado = conversor.celsiusParaFahrenheit(valorParaConversao);
-		}
-		else if(opcao==2){
+			break;
+		case 2:
 			resultado = conversor.celsiusParaKelvin(valorParaConversao);
-		}
-		else if(opcao==3){
+			break;
+		case 3:
 			resultado = conversor.fahrenheitParaCelsius(valorParaConversao);
-		}
-		else if(opcao==4){
+			break;
+		case 4:
 			resultado = conversor.fahrenheitParaKelvin(valorParaConversao);
-		}
-		else if (opcao==5){
+			break;
+		case 5:
 			resultado = conversor.kelvinParaCelsius(valorParaConversao);
-		}
-		else if (opcao==6){
+			break;
+		case 6:
 			resultado = conversor.kelvinParaFahrenheit(valorParaConversao);
-		}
-		else{
+			break;
+		default:
 			System.out.println("Opção inválida!!!");
 		}
 		
